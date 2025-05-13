@@ -1,6 +1,10 @@
+import { format } from 'timeago.js';
 import './../CSS/Tweet.css'
 
 function Tweet( {content, likeCount, commentsCount, repostCount, viewsCount, userName} ){
+
+    const time = format(Tweet.timeStamp);
+
     return (
         <>
             <div className='tweet-wrapper'>
@@ -26,6 +30,7 @@ function Tweet( {content, likeCount, commentsCount, repostCount, viewsCount, use
                         </div>
                         <div className='time'>
                             {/* Time stamp to be added */}
+                            {time}
                         </div>
                     </div>
                     {/* User options */}

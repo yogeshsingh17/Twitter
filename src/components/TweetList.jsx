@@ -15,6 +15,7 @@ function TweetList( {tweets} ){
                                 commentsCount={tweet.commentsCount}
                                 repostCount={tweet.repostCount}
                                 viewsCount={tweet.viewsCount}
+                                time ={tweet.time}
                             />
                         </li>
                     </>
