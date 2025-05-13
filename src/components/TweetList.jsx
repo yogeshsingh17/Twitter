@@ -1,13 +1,21 @@
 import Tweet from "./Tweet";
+import './../CSS/TweetList.css';
 
 function TweetList( {tweets} ){
     return (
-        <ul>
+        <ul className="tweet-list">
             {
                 tweets.map((tweet) => (
                     <>
                         <li>
-                            <Tweet content={tweet.content} likeCount={tweet.likeCount} />
+                            <Tweet 
+                                userName={tweet.userName}
+                                content={tweet.content} 
+                                likeCount={tweet.likeCount} 
+                                commentsCount={tweet.commentsCount}
+                                repostCount={tweet.repostCount}
+                                viewsCount={tweet.viewsCount}
+                            />
                         </li>
                     </>
                 ))
