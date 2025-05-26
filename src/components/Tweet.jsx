@@ -1,9 +1,16 @@
 import { format } from 'timeago.js';
 import './../CSS/Tweet.css'
+import { useState } from 'react';
+import DotIcon from '../icons/DotIcon';
+import UserOptions from '../icons/UserOptions';
+import Bookmark from '../icons/Bookmark';
+import ShareButton from '../icons/ShareButton';
 
-function Tweet( {content, likeCount, commentsCount, repostCount, viewsCount, userName} ){
+function Tweet( {tweetId, content, likeCount, commentsCount, repostCount, viewsCount, userName, onEdit} ){
 
     const time = format(Tweet.timeStamp);
+
+    const [isEditing, setIsEditing] = useState(false);
 
     return (
         <>
@@ -18,15 +25,8 @@ function Tweet( {content, likeCount, commentsCount, repostCount, viewsCount, use
                             {userName}
                         </div>
                         <div>
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="5"
-                                height="5"
-                                fill="currentColor"
-                                viewBox="0 0 8 8"
-                            >
-                                <circle cx="4" cy="4" r="3" />
-                            </svg>
+                            {/* Dot svg between name and time inside tweet */}
+                            <DotIcon />
                         </div>
                         <div className='time'>
                             {/* Time stamp to be added */}
@@ -35,21 +35,39 @@ function Tweet( {content, likeCount, commentsCount, repostCount, viewsCount, use
                     </div>
                     {/* User options */}
                     <div className='user-options'>
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="24"
-                            height="24"
-                            fill="currentColor"
-                            viewBox="0 0 24 24"
-                        >
-                            <circle cx="12" cy="5" r="2" />
-                            <circle cx="12" cy="12" r="2" />
-                            <circle cx="12" cy="19" r="2" />
-                        </svg>
+                        <UserOptions />
                     </div>
                 </div>
-                <div className="twitter-content">
-                    {content}
+                <div>
+                    <div className="twitter-content">
+                        {/* {content} */}
+                        {isEditing ? (  
+                            <input 
+                                type='text'
+                                value={content} 
+                                onChange={(e) => {
+                                    onEdit({
+                                        id : tweetId,
+                                        content : e.target.value,
+                                        likeCount,
+                                        commentsCount,
+                                        repostCount,
+                                        viewsCount,
+                                        userName,
+                                        time : Tweet.timeStamp      // This is a placeholder for the time
+                                        // This will be replaced with the actual time when the API is ready
+                                    })
+                                }}
+                            /> 
+                        ) : content }
+                    </div>
+                    <div>
+                        <button
+                            onClick={() => setIsEditing(!isEditing)}
+                        >
+                            {isEditing ? 'Save' : 'Edit'}
+                        </button>
+                    </div>
                 </div>
                 <div className='twitter-actions'>
                     <div className='twitter-actions-icons'>
@@ -68,30 +86,10 @@ function Tweet( {content, likeCount, commentsCount, repostCount, viewsCount, use
                     </div>
                     <div className='twitter-actions-svg'>
                         <div className='bookmark'>
-                            <svg 
-                                xmlns="http://www.w3.org/2000/svg" 
-                                width="24" 
-                                height="24" 
-                                viewBox="0 0 24 24" 
-                                fill="none" 
-                                stroke="currentColor" 
-                                strokeWidth="2" 
-                                strokeLinecap="round" 
-                                strokeLinejoin="round" 
-                                className="feather feather-bookmark">
-                                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2z"></path>
-                            </svg>
+                            <Bookmark />
                         </div>
                         <div className='share'>
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="currentColor"
-                            >
-                                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
-                            </svg>
+                            <ShareButton />
                         </div>
                     </div>
                 </div>

@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import AiIcon from '../icons/AiIcon';
 import EmojiIcon from '../icons/EmojiIcon';
 import GalleryIcon from '../icons/GalleryIcon';
@@ -7,7 +8,10 @@ import PollIcon from '../icons/PollIcon';
 import ScheduleIcon from '../icons/ScheduleIcon';
 import './../CSS/AddTweet.css'
 
-function AddTweet(){
+function AddTweet({ onAddTweet }) {
+
+    const [text, setText] = useState("");
+
     return(
         <div className="add-tweet">
             <div className='add-tweet-user-image'>
@@ -16,7 +20,12 @@ function AddTweet(){
             <div className='add-tweet-content'>
                 <div className='add-tweet-wrapper'>
                     <form>
-                        <input type="text" placeholder="What's happening?" />
+                        <input 
+                            type="text" 
+                            placeholder="What's happening?" 
+                            value={text}
+                            onChange={(e) => setText(e.target.value)}
+                        />
                     </form>
                 </div>
                 <div className='add-tweet-actions'>
@@ -28,7 +37,7 @@ function AddTweet(){
                         <GifIcon />
 
                         {/* AI icon */}
-                        <AiIcon />
+                        <AiIcon width={22} height={20}/>
 
                         {/* Poll icon */}
                         <PollIcon />
@@ -44,7 +53,15 @@ function AddTweet(){
 
                     </div>
                     <div className='add-tweet-actions-submit-button'>
-                        <button type="submit">Post</button>
+                        <button 
+                            type="submit"
+                            onClick={() => {
+                                onAddTweet(text);
+                                setText("");
+                            }}
+                        >
+                            Post
+                        </button>
                     </div>
                 </div>
             </div>

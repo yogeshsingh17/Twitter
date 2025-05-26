@@ -1,0 +1,37 @@
+body{
+    margin: 0;
+}
+
+.notification-page{
+    width: 100%;
+}
+
+.notification-page-top-bar{
+    display : flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    /* border: 1px solid white; */
+}
+
+.notification-page-tabs-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.notification-page-tab{
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.line{
+    border: 1px solid rgb(255, 255, 255, 0.2);
+}

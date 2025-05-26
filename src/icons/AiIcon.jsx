@@ -1,11 +1,12 @@
-const AiIcon = () => {
+const AiIcon = ( {width, height, backgroundColor, fill} ) => {
     return (
         <svg 
             xmlns="http://www.w3.org/2000/svg" 
-            width="22" 
-            height="20" 
-            fill="currentColor"
-            stroke='currentColor' 
+            width= {width} 
+            height= {height} 
+            background-color = {backgroundColor}
+            fill={fill}
+            stroke='white' 
             viewBox="0 0 256 256"
             strokeWidth="1.5"
         >
