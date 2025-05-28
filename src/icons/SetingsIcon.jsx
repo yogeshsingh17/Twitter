@@ -1,9 +1,9 @@
-const SettingsIcon = ({ backgroundColor }) => {
+const SettingsIcon = ({ backgroundColor, width, height }) => {
     return (
         <svg 
             xmlns="http://www.w3.org/2000/svg" 
-            width="30" 
-            height="30" 
+            width={width} 
+            height={height} 
             style={{ backgroundColor }}
             fill="none"
             stroke="white" 

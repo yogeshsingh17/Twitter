@@ -2,13 +2,14 @@ import { NavLink } from "react-router-dom";
 import AiIcon from "../icons/AiIcon";
 import HomeIcon from "../icons/HomeIcon";
 import MessageIcon from "../icons/MessageIcon";
-import MoreOptionsIcon from "../icons/MoreOptionsIcon";
+// import MoreOptionsIcon from "../icons/MoreOptionsIcon";
 import NewPostIcon from "../icons/NewPostIcon";
 import NotificationIcon from "../icons/NotificationIcon";
 import SearchIcon from "../icons/SearchIcon";
 import TwitterIcon from "../icons/TwitterIcon";
 import UserProfileIcon from "../icons/UserProfileIcon";
 import './../CSS/Header.css'
+import MoreOptions from "./MoreOptions";
 // import NavLink from "react-router-dom";
 
 function Header(){
@@ -23,7 +24,7 @@ function Header(){
                         <div className="twitter-logo">
                             <NavLink to="/" >
                                 {/* Twitter icon */}
-                                <TwitterIcon />
+                                <TwitterIcon width="30" height="30" />
                             </NavLink>
                         </div>
                         <div className="twitter-header-icons">
@@ -72,10 +73,10 @@ function Header(){
                             </div>
 
                             <div className="twitter-header-icons-hover-effect">
-                                <NavLink to="/more-options" className="twitter-header-icons-hover-effect-navlink">
+                                <div className="twitter-header-icons-hover-effect-new-post-icon">
                                     {/* More options icon */}
-                                    <MoreOptionsIcon />
-                                </NavLink>
+                                    <MoreOptions />
+                                </div>
                             </div>
 
                             <div className="twitter-header-icons-hover-effect">

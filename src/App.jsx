@@ -6,7 +6,16 @@ import NotificationPage from './pages/NotificationPage';
 import MessagesPage from './pages/MessagesPage';
 import AIPage from './pages/AIPage';
 import UserProfile from './pages/UserProfile';
-import MoreOptions from './pages/MoreOptions';
+import Lists from './pages/Lists';
+import PremiumSignUp from './pages/PremiumSignUp';
+import BookMarks from './pages/Bookmarks';
+import Communities from './pages/Communities';
+import Monetization from './pages/Monetization';
+import Verified from './pages/Verified';
+import Adds from './pages/Adds';
+import Jobs from './pages/Jobs';
+import CreateYourSpace from './pages/CreateYourSpace';
+import SettingsAndPrivacy from './pages/SettingsAndPrivacy';
 
 function App() {
   return (
@@ -18,7 +27,16 @@ function App() {
         <Route path='/Messages' element={<MessagesPage />} />
         <Route path='/AI' element={<AIPage />} />
         <Route path='/user-profile' element={<UserProfile />} />
-        <Route path='/more-options' element={<MoreOptions />} />
+        <Route path='/lists' element={<Lists />} />
+        <Route path='/premium_sign_up' element={<PremiumSignUp />} />
+        <Route path='/bookmarks' element={<BookMarks />} />
+        <Route path='/communities' element={<Communities />} />
+        <Route path='/monetization' element={<Monetization />} />
+        <Route path='/verified_orgs' element={<Verified />} />
+        <Route path='/ads' element={<Adds />} />
+        <Route path='/jobs' element={<Jobs />} />
+        <Route path='/create_your_space' element={<CreateYourSpace />} />
+        <Route path='/settings_and_privacy' element={<SettingsAndPrivacy />} />
       </Routes>
     </BrowserRouter>
   )

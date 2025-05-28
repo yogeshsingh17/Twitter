@@ -1,6 +1,7 @@
 import { useState } from "react";
 import SettingsIcon from "../icons/SetingsIcon";
 import './../CSS/NotificationPage.css';
+import Header from "../components/Header";
 
 function NotificationPage(){
 
@@ -19,7 +20,10 @@ function NotificationPage(){
     }
 
     return (
-        <>
+        <div className="notification-page-body">
+            <div className="header-container">
+                <Header />
+            </div>
             <div className="notification-page">
                 <div className="notification-page-top-bar">
                     <div className="notification-page-top-bar-title">
@@ -63,7 +67,7 @@ function NotificationPage(){
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 

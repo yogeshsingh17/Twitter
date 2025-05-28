@@ -2,8 +2,17 @@ body{
     margin: 0;
 }
 
+.notification-page-body{
+    display: flex;
+}
+
+.header-container{
+    width: 15vw;
+}
+
 .notification-page{
-    width: 100%;
+    width: 50vw;
+    border-right: 1px solid white;
 }
 
 .notification-page-top-bar{

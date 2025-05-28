@@ -1,0 +1,16 @@
+.list-page-body{
+    display: flex;
+}
+
+.header-container{
+    width: 15vw;
+}
+
+.list-page{
+    width: 50vw;
+    border-right: 1px solid white;
+}
+
+.list-page-top-bar{
+    display: flex;
+}

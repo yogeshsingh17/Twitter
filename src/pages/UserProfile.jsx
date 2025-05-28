@@ -7,6 +7,8 @@ import CalendarIcon from "../icons/CalenderIcon";
 import LocationIcon from "../icons/LocationIcon";
 import './../CSS/UserProfile.css'
 import ProfilePage from "../components/ProfilePage";
+import TwitterHeaderImg from '../assets/TwitterHeaderImg.webp';
+
 function UserProfile(){
 
     // const handleBackButtonClick = () => {
@@ -50,12 +52,12 @@ function UserProfile(){
                 </div>
                 <div className="user-details">
                     <div className="user-details-header-image">
-                        <img src="" alt="" />
+                        <img src={TwitterHeaderImg} alt="" />
                     </div>
                     <div className="user-details-profile-container">
                         <div className="user-details-pofile">
                             <div className="user-details-profile-image">
-                                <img src="" alt="" />
+                                <img src="https://www.w3schools.com/howto/img_avatar.png" alt="profileImg" />
                             </div>
                             <div className="empty-div"></div>
                             <div className="user-details-button">

@@ -69,6 +69,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    /* border: 1px solid white; */
+}
+
+.twitter-header-icons-hover-effect-new-post-icon{
+    width: 30px;
+    height: 30px;
+    /* border: 1px solid white; */
 }
 
 .twitter-user-image-header{

@@ -3,6 +3,7 @@ import SearchIcon from "../icons/SearchIcon";
 import SettingsIcon from "../icons/SetingsIcon";
 import './../CSS/SearchPage.css';
 import { useState } from "react";
+import Header from "../components/Header";
 
 function SearchPage() {
 
@@ -25,57 +26,62 @@ function SearchPage() {
     const [activeTab, setActiveTab] = useState("for-you");
 
     return (
-        <div className="search-page">
-            <div>
-                <div className="search-page-top-bar">
-                    <div className="search">
-                        <div className="form-outer-div">
-                            <div className="form">
-                                <form action="#" role="search">
-                                    <div className="search-bar">
-                                        <div className="search-input">
-                                            <SearchIcon fill="none"/>
-                                            <input                                                 
-                                                type="text"  
-                                                placeholder="Search Twitter"
-                                            />
+        <div className="search-page-body">
+            <div className="header-container">
+                <Header />
+            </div>
+            <div className="search-page">
+                <div>
+                    <div className="search-page-top-bar">
+                        <div className="search">
+                            <div className="form-outer-div">
+                                <div className="form">
+                                    <form action="#" role="search">
+                                        <div className="search-bar">
+                                            <div className="search-input">
+                                                <SearchIcon fill="none"/>
+                                                <input                                                 
+                                                    type="text" 
+                                                    placeholder="Search Twitter"
+                                                />
+                                            </div>
                                         </div>
-                                    </div>
-                                </form>
+                                    </form>
+                                </div>
+                            </div>
+                            <div className="settings-icon">
+                                <SettingsIcon backgroundColor="none" width="30" height="30" />
                             </div>
                         </div>
-                        <div className="settings-icon">
-                            <SettingsIcon backgroundColor="none" />
-                        </div>
-                    </div>
-                    <div className="navigation-links">
-                        {tabs.map((tab) => (
-                            <div className="nav-link-container" key={tab.id}>
-                                <button 
-                                    className={`nav-link ${activeTab === tab.id ? "active" : ""}`}
-                                    onClick={() => setActiveTab(tab.id)}
-                                    style={{
-                                        borderBottom: activeTab === tab.id ? "2px solid white" : "none",
-                                    }}
-                                >
-                                    {tab.label}
-                                </button>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-                {/* Content */}
-                <div className="search-page-content-container">
-                    <div className="search-page-content">
-                        <h3 className="search-page-content-heading">
-                            {tabs.find(tab => tab.id === activeTab).label}      {/* find() searches the tabs array, it looks for the object that matches the id with the activeTab and returns the full object, then using .label we access the label property. */}
-                        </h3>
-
-                        <ul>
-                            {dummyData[activeTab].map((item, idx) => (
-                                <li key={idx} style={{ marginBottom: "6px" }}>{item}</li>
+                        <div className="navigation-links">
+                            {tabs.map((tab) => (
+                                <div className="nav-link-container" key={tab.id}>
+                                    <button 
+                                        className={`nav-link ${activeTab === tab.id ? "active" : ""}`}
+                                        onClick={() => setActiveTab(tab.id)}
+                                        style={{
+                                            borderBottom: activeTab === tab.id ? "2px solid white" : "none",
+                                        }}
+                                    >
+                                        {tab.label}
+                                    </button>
+                                </div>
                             ))}
-                        </ul>
+                        </div>
+                    </div>
+                    {/* Content */}
+                    <div className="search-page-content-container">
+                        <div className="search-page-content">
+                            <h3 className="search-page-content-heading">
+                                {tabs.find(tab => tab.id === activeTab).label}      {/* find() searches the tabs array, it looks for the object that matches the id with the activeTab and returns the full object, then using .label we access the label property. */}
+                            </h3>
+
+                            <ul>
+                                {dummyData[activeTab].map((item, idx) => (
+                                    <li key={idx} style={{ marginBottom: "6px" }}>{item}</li>
+                                ))}
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
