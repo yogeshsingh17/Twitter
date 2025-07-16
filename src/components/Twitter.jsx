@@ -4,6 +4,8 @@ import './../CSS/Twitter.css';
 import Header from './Header';
 import { memo, useCallback, useState } from 'react';
 import { Routes } from 'react-router-dom';
+import SearchBar from './SearchBar';
+import PremiumSubscriptionPage from './PremiumSubscriptionCard';
 
 // Dummy data for initial tweets
 // This data will be replaced with the data from the API 
@@ -108,6 +110,14 @@ function Twitter(){
                     </div>
                     <div>
                         <TweetList tweets={tweets} onEditTweet = {handleEditTweet}/>
+                    </div>
+                </div>
+                <div style={{width: "35vw", border: "1px solid white", display: "flex", flexDirection: "column", alignItems: "center"}}>
+                    <SearchBar />
+                    <PremiumSubscriptionPage />
+                    <div>
+                        <h2>Trends for you</h2>
+                        {/* This is where we can add the trends for you component */}
                     </div>
                 </div>
             </div>

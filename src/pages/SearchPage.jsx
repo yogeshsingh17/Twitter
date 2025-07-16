@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import SearchIcon from "../icons/SearchIcon";
 import SettingsIcon from "../icons/SetingsIcon";
-import './../CSS/SearchPage.css';
+import style from './../CSS/SearchPage.module.css';
 import { useState } from "react";
 import Header from "../components/Header";
 
@@ -37,7 +37,7 @@ function SearchPage() {
                             <div className="form-outer-div">
                                 <div className="form">
                                     <form action="#" role="search">
-                                        <div className="search-bar">
+                                        <div className={style.searchbar}>
                                             <div className="search-input">
                                                 <SearchIcon fill="none"/>
                                                 <input                                                 

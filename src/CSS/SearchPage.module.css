@@ -32,7 +32,7 @@ body{
     width: 90%;
 }
 
-.search-bar{
+.searchbar{
     display: flex;
     justify-content: center;
     align-items: center;

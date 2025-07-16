@@ -1,0 +1,185 @@
+body{
+    max-width: 100vw;
+    height: auto;
+    background: #0f0c29;
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+}
+
+/* Premium Subscription Page */
+.premium-subscription-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem 0;
+}
+
+.close-button-container{
+    position: absolute;
+    left: 1.5rem;
+    top: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+}
+
+.close-button-container:hover{
+    background-color: black;
+}
+
+.close-button{
+    color: white;
+    border: none;
+    background-color: transparent;
+}
+
+/* Upgrade Header */
+.upgrade-header{
+    font-size: 3rem;
+    font-weight: bold;
+    /* margin-top: 4rem; */
+    margin-bottom: 1rem;
+}
+
+/* Premium Subscription Content */
+.premium-subscription-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.premium-subscription-content p{
+    line-height: 2rem;
+    margin: 0;
+}
+
+/* Pricing Categories */
+.premium-subscription-pricing-categories{
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 1rem;
+    padding: 0.25rem 0.25rem;
+    gap: 0.25rem;
+    margin-top: 2rem;
+}
+
+.premium-subscription-pricing-category-annual{
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.5rem 0.5rem;
+    cursor: pointer;
+    color: #888;
+}
+
+.premium-subscription-pricing-category-annual.active{
+    background-color: black;
+    padding: 0.5rem 0.5rem;
+    border-radius: 0.75rem;
+    color: white;
+}
+
+.premium-subscription-pricing-category-annual .best-value{
+    border: 1px solid white;
+    padding: 0.25rem 0.25rem;
+    font-size: x-small;
+    border-radius: 1rem;
+    background-color: rgb(12, 54, 12);
+    font-weight: bold;
+}
+
+.premium-subscription-pricing-category-monthly{
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0.5rem;
+    cursor: pointer;
+    color: #888;
+}
+
+.premium-subscription-pricing-category-monthly.active{
+    background-color: black;
+    padding: 0.5rem 0.5rem;
+    border-radius: 0.75rem;
+    color: white;
+}
+
+/* Pricing Cards */
+.pricing-card{
+    display: flex;
+    gap: 1rem;
+    margin-top: 3rem;
+}
+
+.pricing-card-item{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    border-radius: 1rem;
+    width: 300px;
+    transform: scale(1);
+    /* box-shadow: 0 2px 8px rgb(255, 255, 255, 0.2); */
+    background-color: rgba(36, 36, 62, 0.7);
+    border: 2px solid rgba(255, 255, 255, 0.08);
+}
+
+.pricing-card-item.active{
+    transform: scale(1.03);
+    border: 2px solid rgb(0, 191, 255);
+    box-shadow: 0 2px 8px rgb(255, 255, 255, 0.2);
+}
+
+.pricing-card-item-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.selected-plan.active {
+  border-color: #1d9bf0;
+}
+
+.circle-selector {
+  display: flex;
+  justify-content: center;
+}
+
+.circle-outer {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #888;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  cursor: pointer;
+}
+
+.circle-outer.active {
+  border-color: #1d9bf0;
+}
+
+.circle-inner {
+  width: 10px;
+  height: 10px;
+  background-color: #1d9bf0;
+  border-radius: 50%;
+}
+
+.pricing-card-benefits{
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+    line-height: 2rem;
+}
+
+.pricing-card-benefit-item{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}

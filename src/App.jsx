@@ -7,7 +7,6 @@ import MessagesPage from './pages/MessagesPage';
 import AIPage from './pages/AIPage';
 import UserProfile from './pages/UserProfile';
 import Lists from './pages/Lists';
-import PremiumSignUp from './pages/PremiumSignUp';
 import BookMarks from './pages/Bookmarks';
 import Communities from './pages/Communities';
 import Monetization from './pages/Monetization';
@@ -16,6 +15,7 @@ import Adds from './pages/Adds';
 import Jobs from './pages/Jobs';
 import CreateYourSpace from './pages/CreateYourSpace';
 import SettingsAndPrivacy from './pages/SettingsAndPrivacy';
+import PremiumSubscriptionPage from './pages/PremiumSubscriptionPage';
 
 function App() {
   return (
@@ -28,7 +28,6 @@ function App() {
         <Route path='/AI' element={<AIPage />} />
         <Route path='/user-profile' element={<UserProfile />} />
         <Route path='/lists' element={<Lists />} />
-        <Route path='/premium_sign_up' element={<PremiumSignUp />} />
         <Route path='/bookmarks' element={<BookMarks />} />
         <Route path='/communities' element={<Communities />} />
         <Route path='/monetization' element={<Monetization />} />
@@ -37,6 +36,7 @@ function App() {
         <Route path='/jobs' element={<Jobs />} />
         <Route path='/create_your_space' element={<CreateYourSpace />} />
         <Route path='/settings_and_privacy' element={<SettingsAndPrivacy />} />
+        <Route path='/premium_subscription' element={<PremiumSubscriptionPage />} />
       </Routes>
     </BrowserRouter>
   )

@@ -1,0 +1,43 @@
+.compare-features-container{
+    margin-top: 5rem;
+    width: 90%;
+}
+
+.compare-feature-header{
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+
+/* Feature list box */
+.compare-feature-list-box{
+    padding: 0 2rem;
+    border-radius: 1rem;
+    margin: 2rem 0;
+    line-height: 3rem;
+    /* box-shadow: 0 2px 8px rgb(255, 255, 255, 0.2); */
+    background-color: rgba(36, 36, 62, 0.7);
+    border: 2px solid rgba(255, 255, 255, 0.08);
+}
+
+.compare-feature-list-box__header, .compare-feature-list-box__content{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.compare-feature-list-box__header{
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding: 0.75rem 0;
+}
+
+.compare-feature-list-box__header-item{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+}
+
+.line{
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}

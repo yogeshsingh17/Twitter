@@ -1,0 +1,31 @@
+.premium-subscription{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%;
+}
+
+.premium-subscription-header h2 {
+    margin-bottom: 0;
+}
+
+.premium-subscription-button-container{
+    background-color: #1DA1F2;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight:600;
+    font-size: 16px;
+}
+
+.premium-subscription-button-container .premium-subscription-button{
+    color: white;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
