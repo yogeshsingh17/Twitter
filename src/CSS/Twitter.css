@@ -1,11 +1,7 @@
-.heading{
-    font-size: 2em;
-    color: #1DA1F2;
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
 .twitter-home-page{
     display: flex;
-    border: 1px solid #ccc;
+}
+
+.twitter-home-page__main{
+    display: flex;
 }

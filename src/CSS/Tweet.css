@@ -2,10 +2,7 @@
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  border: 1px solid black;
-  border-radius: 5px;
-  background-color: #674040;
-  /* width: 40vw; */
+  border-top: 1px solid rgb(255, 255, 255, 0.3);
 }
 
 .twitter-user{
@@ -13,7 +10,6 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    /* border: 1px solid black; */
 }
 
 .user-image{
@@ -22,7 +18,6 @@
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
-    /* border: 1px solid black; */
 }
 
 .twitter-actions{
@@ -30,7 +25,6 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    /* border: 1px solid black; */
     gap:  2rem;
 }
 
@@ -40,7 +34,6 @@
     justify-content: space-between;
     align-items: center;
     width: 70%; 
-    /* border: 1px solid black; */
 }
 
 .twitter-actions-svg{

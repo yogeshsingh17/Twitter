@@ -99,27 +99,33 @@ function Twitter(){
 
     return (
         <>
-            {/* <div className='heading'>Twitter</div> */}
             <div className='twitter-home-page'>
-                <div style={{width: "15vw", border: "1px solid white"}}>
+                <header 
+                    style={{width: "15vw", borderRight: "1px solid rgba(255,255,255,0.3)"}}
+                >
                     <Header />
-                </div>
-                <div style={{width: "50vw", border: "1px solid white"}}>
-                    <div>
-                        <MemoisedAddTweets onAddTweet = {handleAddTweet} />
+                </header>
+                <main 
+                    style={{width: "85vw"}}
+                    className='twitter-home-page__main'
+                >
+                    <div style={{width: "50vw"}}>
+                        <div>
+                            <MemoisedAddTweets onAddTweet = {handleAddTweet} />
+                        </div>
+                        <div>
+                            <TweetList tweets={tweets} onEditTweet = {handleEditTweet}/>
+                        </div>
                     </div>
-                    <div>
-                        <TweetList tweets={tweets} onEditTweet = {handleEditTweet}/>
+                    <div style={{width: "35vw", borderLeft: "1px solid rgba(255,255,255,0.3)", display: "flex", flexDirection: "column", alignItems: "center"}}>
+                        <SearchBar />
+                        <PremiumSubscriptionPage />
+                        <div>
+                            <h2>Trends for you</h2>
+                            {/* This is where we can add the trends for you component */}
+                        </div>
                     </div>
-                </div>
-                <div style={{width: "35vw", border: "1px solid white", display: "flex", flexDirection: "column", alignItems: "center"}}>
-                    <SearchBar />
-                    <PremiumSubscriptionPage />
-                    <div>
-                        <h2>Trends for you</h2>
-                        {/* This is where we can add the trends for you component */}
-                    </div>
-                </div>
+                </main>
             </div>
         </>
     )

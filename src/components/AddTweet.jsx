@@ -20,40 +20,46 @@ function AddTweet({ onAddTweet }) {
             <div className='add-tweet-content'>
                 <div className='add-tweet-wrapper'>
                     <form>
-                        <input 
+                        <textarea 
+                            className="tweet-textarea"
                             type="text" 
                             placeholder="What's happening?" 
                             value={text}
-                            onChange={(e) => setText(e.target.value)}
+                            onChange={(e) => {
+                                setText(e.target.value)
+                                e.target.style.height = 'auto'; // Reset height to shrink if needed
+                                e.target.style.height = `${e.target.scrollHeight}px`; // Set new height
+                            }}
                         />
                     </form>
                 </div>
                 <div className='add-tweet-actions'>
-                    <div className='add-tweet-actions-icons'>
+                    <div className='add-tweet-actions__icons'>
                         {/* Gallery icon */}
-                        <GalleryIcon />
+                        <span className='add-tweet-actions__icons-icon'><GalleryIcon /></span>
 
                         {/* GIF icon */}
-                        <GifIcon />
+                        <span className='add-tweet-actions__icons-icon'><GifIcon /></span>
 
                         {/* AI icon */}
-                        <AiIcon width={22} height={20}/>
+                        <span className='add-tweet-actions__icons-icon'><AiIcon width={22} height={20} backgroundColor="white" fill="white"/></span>
 
                         {/* Poll icon */}
-                        <PollIcon />
+                        <span className='add-tweet-actions__icons-icon'><PollIcon /></span>
 
                         {/* Emoji icon */}
-                        <EmojiIcon />
+                        <span className='add-tweet-actions__icons-icon'><EmojiIcon /></span>
 
                         {/* Schedule icon */}
-                        <ScheduleIcon />
+                        <span className='add-tweet-actions__icons-icon'><ScheduleIcon /></span>
 
                         {/* Location icon */}
-                        <LocationIcon />
+                        <span className='add-tweet-actions__icons-icon'><LocationIcon /></span>
 
                     </div>
-                    <div className='add-tweet-actions-submit-button'>
+                    <div className='add-tweet-actions-submit-buttons'>
                         <button 
+                            className='add-tweet-actions-submit-buttons__button'
                             type="submit"
                             onClick={() => {
                                 onAddTweet(text);

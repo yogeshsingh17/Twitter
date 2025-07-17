@@ -3,7 +3,7 @@
     max-width: 80%;
     margin: 15px auto;
     /* padding: 10px; */
-    background-color: #f1f1f1;
+    /* background-color: #f1f1f1; */
     border-radius: 30px;
     display: flex;
     align-items: center;
@@ -25,8 +25,9 @@
     width: 100%;
     padding: 10px 40px 10px 20px;
     border-radius: 30px;
-    background-color: #f1f1f1;
-    border: none;
+    background-color: transparent;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: white;
     outline: none;
     font-size: 16px;
 }
