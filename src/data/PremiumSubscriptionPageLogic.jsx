@@ -1,13 +1,13 @@
 export const pricingData = {
     annual : [
-        {name : "Basic", price : "141.67/month"},
-        {name : "Premium", price : "356/month" },
-        {name : "PremiumPlus", price : "2200/month"}
+        {id : 1 ,name : "Basic", price : "141.67"},
+        {id : 2 ,name : "Premium", price : "356" },
+        {id : 3 ,name : "PremiumPlus", price : "2200"}
     ],
     monthly : [
-        {name : "Basic", price : "170/month"},
-        {name : "Premium", price : "427/month" },
-        {name : "PremiumPlus", price : "2570/month"}
+        {id : 1 ,name : "Basic", price : "170"},
+        {id : 2 ,name : "Premium", price : "427" },
+        {id : 3 ,name : "PremiumPlus", price : "2570"}
     ]
 }
 
