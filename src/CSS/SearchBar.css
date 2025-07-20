@@ -1,6 +1,6 @@
 .search-bar{
-    width: 100%;
-    max-width: 80%;
+    width: 80%;
+    /* max-width: 80%; */
     margin: 15px auto;
     /* padding: 10px; */
     /* background-color: #f1f1f1; */

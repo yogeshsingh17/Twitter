@@ -1,0 +1,27 @@
+.trending-card {
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border-bottom: 1px solid #2f3336;
+}
+
+.trending-card:hover {
+  background-color: #1d1f23;
+}
+
+.trending-category {
+  font-size: 13px;
+  color: #6e767d;
+}
+
+.trending-hashtag {
+  font-size: 15px;
+  font-weight: 600;
+  color: white;
+  margin: 2px 0;
+}
+
+.trending-post-count {
+  font-size: 13px;
+  color: #6e767d;
+}

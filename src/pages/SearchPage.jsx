@@ -26,41 +26,46 @@ function SearchPage() {
     const [activeTab, setActiveTab] = useState("for-you");
 
     return (
-        <div className="search-page-body">
-            <div className="header-container">
+        <div className={style.searchPageBody}>
+            <div className={style.headerContainer}>
                 <Header />
             </div>
-            <div className="search-page">
+            <div className={style.searchPage}>
                 <div>
-                    <div className="search-page-top-bar">
-                        <div className="search">
-                            <div className="form-outer-div">
-                                <div className="form">
+                    <div className={style.searchPageTopBar}>
+                        <div className={style.search}>
+                            <div className={style.formOuterDiv}>
+                                <div className={style.form}>
                                     <form action="#" role="search">
-                                        <div className={style.searchbar}>
-                                            <div className="search-input">
-                                                <SearchIcon fill="none"/>
-                                                <input                                                 
-                                                    type="text" 
-                                                    placeholder="Search Twitter"
-                                                />
+                                        <div className={style.searchBar}>
+                                            <div className={style.searchInput}>
+                                                <div className={style.searchIcon}>
+                                                    <SearchIcon fill="none"/>
+                                                </div>
+                                                {/* <SearchIcon fill="none"/> */}
+                                                <div className={style.searchTextArea}>
+                                                    <input                                                 
+                                                        type="text" 
+                                                        placeholder="Search Twitter"
+                                                    />
+                                                </div>
                                             </div>
                                         </div>
                                     </form>
                                 </div>
                             </div>
-                            <div className="settings-icon">
+                            <div className={style.settingsIcon}>
                                 <SettingsIcon backgroundColor="none" width="30" height="30" />
                             </div>
                         </div>
-                        <div className="navigation-links">
+                        <div className={style.navigationLinks}>
                             {tabs.map((tab) => (
-                                <div className="nav-link-container" key={tab.id}>
+                                <div className={style.navLinkContainer} key={tab.id}>
                                     <button 
-                                        className={`nav-link ${activeTab === tab.id ? "active" : ""}`}
+                                        className={`${style.navLink} ${activeTab === tab.id ? "active" : ""}`}
                                         onClick={() => setActiveTab(tab.id)}
                                         style={{
-                                            borderBottom: activeTab === tab.id ? "2px solid white" : "none",
+                                            borderBottom: activeTab === tab.id ? "2px solid white" : "2px solid transparent",
                                         }}
                                     >
                                         {tab.label}
@@ -70,13 +75,13 @@ function SearchPage() {
                         </div>
                     </div>
                     {/* Content */}
-                    <div className="search-page-content-container">
-                        <div className="search-page-content">
-                            <h3 className="search-page-content-heading">
+                    <div className={style.searchPageContentContainer}>
+                        <div className={style.searchPageContent}>
+                            <h3 className={style.searchPageContentHeading}>
                                 {tabs.find(tab => tab.id === activeTab).label}      {/* find() searches the tabs array, it looks for the object that matches the id with the activeTab and returns the full object, then using .label we access the label property. */}
                             </h3>
 
-                            <ul>
+                            <ul className={style.searchPageContentUl}>
                                 {dummyData[activeTab].map((item, idx) => (
                                     <li key={idx} style={{ marginBottom: "6px" }}>{item}</li>
                                 ))}

@@ -1,0 +1,14 @@
+.trending-list {
+  background-color: #16181c;
+  border-radius: 16px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.trending-heading {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  padding: 16px;
+  border-bottom: 1px solid #2f3336;
+}

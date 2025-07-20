@@ -101,15 +101,18 @@ function Twitter(){
         <>
             <div className='twitter-home-page'>
                 <header 
-                    style={{width: "15vw", borderRight: "1px solid rgba(255,255,255,0.3)"}}
+                    style={{minWidth: "15vw", borderRight: "1px solid rgba(255,255,255,0.3)"}}
                 >
                     <Header />
                 </header>
                 <main 
-                    style={{width: "85vw"}}
+                    style={{maxWidth: "85vw"}}
                     className='twitter-home-page__main'
                 >
-                    <div style={{width: "50vw"}}>
+                    <div 
+                        className='middle-bar'
+                        style={{width: "50vw"}}
+                    >
                         <div>
                             <MemoisedAddTweets onAddTweet = {handleAddTweet} />
                         </div>
@@ -117,9 +120,22 @@ function Twitter(){
                             <TweetList tweets={tweets} onEditTweet = {handleEditTweet}/>
                         </div>
                     </div>
-                    <div style={{width: "35vw", borderLeft: "1px solid rgba(255,255,255,0.3)", display: "flex", flexDirection: "column", alignItems: "center"}}>
-                        <SearchBar />
-                        <PremiumSubscriptionPage />
+                    <div 
+                        className='right-side-bar'
+                        style={{
+                            width: "35vw", 
+                            borderLeft: "1px solid rgba(255,255,255,0.3)", 
+                            display: "flex", 
+                            flexDirection: "column", 
+                            alignItems: "center"
+                        }}
+                    >
+                        <div className='right-side-bar__search-bar'>
+                            <SearchBar />
+                        </div>
+                        <div className='right-side-bar__premium-subscriptipn-page'>
+                            <PremiumSubscriptionPage />
+                        </div>
                         <div>
                             <h2>Trends for you</h2>
                             {/* This is where we can add the trends for you component */}

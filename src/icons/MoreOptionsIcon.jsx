@@ -1,4 +1,4 @@
-const MoreOptionsIcon = () => {
+const MoreOptionsIcon = ( {stroke} ) => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -10,7 +10,7 @@ const MoreOptionsIcon = () => {
             <circle cx="7" cy="12" r="1.5" />
             <circle cx="12" cy="12" r="1.5" />
             <circle cx="17" cy="12" r="1.5" />
-            <circle cx="12" cy="12" r="10" fill="none" stroke="white" strokeWidth="2" />
+            <circle cx="12" cy="12" r="10" fill="none" stroke={stroke} strokeWidth="2" />
         </svg>
     )
 }

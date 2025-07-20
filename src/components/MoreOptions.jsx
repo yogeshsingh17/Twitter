@@ -38,7 +38,7 @@ function MoreOptions(){
             {/* <div><MoreOptionsIcon /></div> */}
             <div className="more-options-content-container">
                 <div className="more-options-content-title" onClick={openOptionModal}>
-                    <MoreOptionsIcon />
+                    <MoreOptionsIcon stroke="white" />
                 </div>
                 {open && (
                     <div className="more-options-dropdown-container" onClick={closeOptionModal}>

@@ -2,6 +2,8 @@ import { useState } from "react";
 import SettingsIcon from "../icons/SetingsIcon";
 import './../CSS/NotificationPage.css';
 import Header from "../components/Header";
+import SearchBar from "../components/SearchBar";
+import TrendingList from "../components/TrendingList";
 
 function NotificationPage(){
 
@@ -30,7 +32,7 @@ function NotificationPage(){
                         Notifications
                     </div>
                     <div className="notification-page-top-bar-settings-icon">
-                        <SettingsIcon backgroundColor="none" />
+                        <SettingsIcon backgroundColor="transparent" width="24" height="24" />
                     </div>
                 </div>
                 <div className="notification-page-tabs-container">
@@ -50,7 +52,6 @@ function NotificationPage(){
                         </div>
                     ))}
                 </div>
-                <div className="line"></div>
                 <div className="notification-page-content-container">
                     <div className="notification-page-content">
                         <h3 className="search-page-content-heading">
@@ -64,6 +65,19 @@ function NotificationPage(){
                                 </li>
                             ))}
                         </ul>
+                    </div>
+                </div>
+            </div>
+            <div className="right-side-bar">
+                <div className="right-side-bar__search-bar">
+                    <SearchBar />
+                </div>
+                <div className="right-side-bar__trending">
+                    <span className="right-side-bar__trending">
+                        What's happening
+                    </span>
+                    <div>
+                        <TrendingList />
                     </div>
                 </div>
             </div>

@@ -1,7 +1,19 @@
 .twitter-home-page{
     display: flex;
+    max-width: 100vw;
+    overflow: hidden;
 }
 
 .twitter-home-page__main{
     display: flex;
+}
+
+.right-side-bar__search-bar{
+    width: 100%;
+}
+
+.right-side-bar__premium-subscriptipn-page{
+    display: flex;
+    justify-content: center;
+    width: 90%;
 }
